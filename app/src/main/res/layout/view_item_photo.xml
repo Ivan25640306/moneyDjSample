@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_photo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:clickable="true"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <WebView
+            android:id="@+id/wv_photo"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="1"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:textSize="12sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:lineSpacingMultiplier="0.7"
+            app:layout_constraintTop_toBottomOf="@+id/tv_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="title"
+            />
+
+        <View
+            android:id="@+id/view_click_layer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
